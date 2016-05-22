@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.github.triplet.play'
 
 // Versioning information
 def versionMajor = 0
@@ -15,17 +16,39 @@ android {
         applicationId "com.orogersilva.rachaconta.taberna"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch * 1
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+
+        release {
+
+            storeFile rootProject.file('rachaconta.jks')
+            storePassword System.getenv("KEYSTORE_PASSWORD")
+            keyAlias System.getenv("ALIAS_NAME")
+            keyPassword System.getenv("ALIAS_PASSWORD")
+        }
     }
 
     buildTypes {
 
         release {
+
+            signingConfig signingConfigs.release
+
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    play {
+
+        serviceAccountEmail = System.getenv("SERVICE_ACCOUNT_EMAIL")
+        pk12File = rootProject.file('play.p12')
+        track = 'alpha'
     }
 }
 
