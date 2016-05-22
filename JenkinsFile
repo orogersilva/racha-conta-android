@@ -4,6 +4,11 @@ node {
         extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '2797a6f7-9abc-41ce-b69c-601836ec3812',
         url: 'https://github.com/orogersilva/racha-conta-android.git']]])
 
+    echo env.ALIAS_NAME
+    echo env.ALIAS_PASSWORD
+    echo env.KEYSTORE_PASSWORD
+    echo env.SERVICE_ACCOUNT_EMAIL
+
     // 1) Compile Stage
 
     stage 'Compile'
