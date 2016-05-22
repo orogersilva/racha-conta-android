@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/orogersilva/racha-conta-android.svg?branch=master)](https://travis-ci.org/orogersilva/racha-conta-android)
+
 Aplicativo para a plataforma Android que auxilia ao rachar a conta em happy hours entre amigos.
 
 License

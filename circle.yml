@@ -1,0 +1,22 @@
+dependencies:
+    override:
+        - chmod +x gradlew
+
+test:
+    # pre:
+        # Inicia emulador Android
+            # - emulator -avd circleci-android22 -no-audio -no-window:
+                # background: true
+                # parallel: true
+        # Espera o emulador iniciar antes de serem dados os comandos para execução dos testes
+            # - circle-android wait-for-boot
+
+    override:
+        # Adicionando permissão para executar gradlew
+        - chmod +x gradlew
+        # Executa testes e gera artefatos
+        - ./gradlew clean testRelease assembleRelease
+        # Copia a saída do build para a pasta de artefatos
+        - cp -r app/build/outputs $CIRCLE_ARTIFACTS
+        # Copia os resultados de testes para o diretório de resultados de testes
+        - cp -r app/build/test-results/* $CIRCLE_TEST_REPORTS
