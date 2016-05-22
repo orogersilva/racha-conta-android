@@ -1,5 +1,9 @@
 node {
 
+    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false,
+        extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '2797a6f7-9abc-41ce-b69c-601836ec3812',
+        url: 'https://github.com/orogersilva/racha-conta-android.git']]])
+
     // 1) Compile Stage
 
     stage 'Compile'
