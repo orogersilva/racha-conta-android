@@ -1,0 +1,22 @@
+node {
+
+    // 1) Compile Stage
+
+    stage 'Compile'
+    bat "gradlew.bat clean compileReleaseSources"
+
+    // 2) Tests Stage
+
+    stage 'Tests'
+    bat "gradlew.bat testRelease"
+
+    // 3) Assemble Stage
+
+    stage 'Assemble'
+    bat "gradlew.bat assembleRelease"
+
+    // 4) Publish Stage
+
+    stage 'Publish'
+    bat "gradlew.bat publishApkRelease"
+}
