@@ -1,0 +1,38 @@
+language: android
+android:
+
+  components:
+    # Descomente as linhas abaixo se você quiser
+    # usar a última revisão de Android SDK Tools
+    - platform-tools
+    - tools
+
+    # A versão do BuildTools usada pelo seu projeto
+    - build-tools-23.0.2
+
+    # A versão do SDK Android usada para compilar seu projeto
+    - android-23
+
+    # Componentes adicionais
+    - extra-google-google_play_services
+    - extra-google-m2repository
+    - extra-android-m2repository
+    - addon-google_apis-google-19
+
+    # Especifique, no mínimo, uma imagem de sistema
+    # se você precisar executar o emulador durante seus testes
+    - sys-img-armeabi-v7a-android-19
+    - sys-img-x86-android-17
+
+before_install:
+    - chmod +x gradlew
+
+# Emulator Management: Create, Start and Wait
+before_script:
+    # - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
+    # - emulator -avd test -no-skin -no-audio -no-window &
+    # - android-wait-for-emulator
+    # - adb shell input keyevent 82 &
+
+script:
+    ./gradlew clean testReleaseUnitTestCoverage assembleRelease
