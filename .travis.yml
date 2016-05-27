@@ -36,3 +36,5 @@ before_script:
 
 script:
     ./gradlew clean testRelease assembleRelease
+
+
