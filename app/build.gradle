@@ -44,6 +44,8 @@ android {
         }
     }
 
+    testBuildType "release"
+
     play {
 
         serviceAccountEmail = System.getenv("SERVICE_ACCOUNT_EMAIL")
