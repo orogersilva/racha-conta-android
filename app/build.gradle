@@ -6,7 +6,7 @@ apply from: "${rootProject.getRootDir()}/config/quality/quality.gradle"
 // Versioning information
 def versionMajor = 0
 def versionMinor = 1
-def versionPatch = 1
+def versionPatch = 2
 
 android {
 
