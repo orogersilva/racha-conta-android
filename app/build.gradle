@@ -6,7 +6,7 @@ apply from: "${rootProject.getRootDir()}/config/quality/quality.gradle"
 // Versioning information
 def versionMajor = 0
 def versionMinor = 1
-def versionPatch = 2
+def versionPatch = 3
 
 android {
 
@@ -29,12 +29,9 @@ android {
         release {
 
             storeFile rootProject.file('rachaconta.jks')
-            // storePassword System.getenv("KEYSTORE_PASSWORD")
-            // keyAlias System.getenv("ALIAS_NAME")
-            // keyPassword System.getenv("ALIAS_PASSWORD")
-            storePassword System.getenv().KEYSTORE_PASSWORD
-            keyAlias System.getenv().ALIAS_NAME
-            keyPassword System.getenv().ALIAS_PASSWORD
+            storePassword System.getenv("KEYSTORE_PASSWORD")
+            keyAlias System.getenv("ALIAS_NAME")
+            keyPassword System.getenv("ALIAS_PASSWORD")
         }
     }
 
@@ -53,8 +50,7 @@ android {
 
     play {
 
-        // serviceAccountEmail = System.getenv("SERVICE_ACCOUNT_EMAIL")
-        serviceAccountEmail = System.getenv().SERVICE_ACCOUNT_EMAIL
+        serviceAccountEmail = System.getenv("SERVICE_ACCOUNT_EMAIL")
         pk12File = rootProject.file('play.p12')
         track = 'alpha'
     }
