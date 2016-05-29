@@ -3,7 +3,7 @@ dependencies:
         - chmod +x gradlew
 
 test:
-    # pre:
+    pre:
         # Inicia emulador Android
             - emulator -avd circleci-android22 -no-audio -no-window:
                 background: true
