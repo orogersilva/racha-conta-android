@@ -1,6 +1,13 @@
 Change Log
 ==========
 
+0.1.4 *(2016-05-29)*
+--------------------
+
+Internal:
+
+ * Correção dos nomes de task para build no Travis CI e Circle CI.
+
 0.1.3 *(2016-05-29)*
 --------------------
 

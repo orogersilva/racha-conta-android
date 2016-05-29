@@ -15,7 +15,7 @@ test:
         # Adicionando permissão para executar gradlew
         - chmod +x gradlew
         # Executa testes e gera artefatos
-        - ./gradlew clean testReleaseUnitTest checkstyleRelease findbugsRelease pmdRelease lintRelease assembleRelease
+        - ./gradlew clean testReleaseUnitTest checkstyle findbugs pmd lintRelease assembleRelease
         # Copia a saída do build para a pasta de artefatos
         - cp -r app/build/outputs $CIRCLE_ARTIFACTS
         # Copia os resultados de testes para o diretório de resultados de testes
