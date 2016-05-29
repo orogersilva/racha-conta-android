@@ -38,6 +38,7 @@ project.afterEvaluate {
                                    '**/R$*.class',
                                    '**/*$ViewInjector*.*',
                                    '**/*$ViewBinder*.*',
+                                   '**/BuildConfig.*',
                                    '**/Manifest*.*']
                 )
 
