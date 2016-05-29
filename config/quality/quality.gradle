@@ -76,8 +76,8 @@ android {
     lintOptions {
 
         abortOnError true
-        xmlReport false
-        htmlReport true
+        xmlReport true
+        htmlReport false
         lintConfig file("${project.rootDir}/config/quality/lint/lint.xml")
         htmlOutput file("$project.buildDir/reports/lint/lint-result.html")
         xmlOutput file("$project.buildDir/reports/lint/lint-result.xml")
