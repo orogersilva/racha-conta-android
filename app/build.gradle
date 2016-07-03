@@ -61,7 +61,7 @@ android {
 hockeyapp {
 
     apiToken = System.getenv("HOCKEY_APP_API_TOKEN")
-    teams=72599
+    teams = 72599
 }
 
 dependencies {
