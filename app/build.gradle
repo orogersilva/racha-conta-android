@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.github.triplet.play'
+apply plugin: 'de.felixschulze.gradle.hockeyapp'
 
 apply from: "${rootProject.getRootDir()}/config/quality/quality.gradle"
 apply from: "${rootProject.getRootDir()}/jacoco.gradle"
@@ -55,6 +56,10 @@ android {
         pk12File = rootProject.file('play.p12')
         track = 'alpha'
     }
+}
+
+hockeyapp {
+    apiToken = System.getenv("HOCKEY_APP_API_TOKEN")
 }
 
 dependencies {
