@@ -1,6 +1,13 @@
 Change Log
 ==========
 
+0.1.6 *(2016-07-03)*
+--------------------
+
+Internal:
+
+ * Distribuição de release para times restritos via HockeyApp.
+
 0.1.5 *(2016-07-03)*
 --------------------
 
