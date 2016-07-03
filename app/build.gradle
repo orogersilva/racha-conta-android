@@ -61,6 +61,7 @@ android {
 hockeyapp {
 
     apiToken = System.getenv("HOCKEY_APP_API_TOKEN")
+    notify = 1
     teams = 72599
 }
 
