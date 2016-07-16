@@ -1,6 +1,13 @@
 Change Log
 ==========
 
+0.2.1 *(2016-07-16)*
+--------------------
+
+Internal:
+
+ * Automatização de deployment via Crashlytics.
+
 0.2.0 *(2016-07-16)*
 --------------------
 
