@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
 apply plugin: 'com.github.triplet.play'
 apply plugin: 'de.felixschulze.gradle.hockeyapp'
 
@@ -70,6 +71,10 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     compile 'com.android.support:appcompat-v7:23.1.1'
+
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.0@aar') {
+        transitive = true;
+    }
 
     testCompile 'junit:junit:4.12'
 
