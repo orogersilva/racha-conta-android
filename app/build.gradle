@@ -46,6 +46,9 @@ android {
 
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            ext.betaDistributionGroupAliasesFilePath="${rootProject.getRootDir()}/crashlytics/group_aliases.txt"
+            ext.betaDistributionReleaseNotesFilePath="${rootProject.getRootDir()}/crashlytics/release_notes.txt"
         }
     }
 
