@@ -1,6 +1,13 @@
 Change Log
 ==========
 
+0.3.1 *(2016-12-26)*
+--------------------
+
+Fix:
+
+ * Atualização da task para execução de testes de instrumentação.
+
 0.3.0 *(2016-12-26)*
 --------------------
 
