@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/gray"
+    >
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:paddingTop="@dimen/textview_name_paddingtop"
+        android:paddingBottom="@dimen/textview_name_paddingbottom"
+        android:textSize="@dimen/textview_name_textsize"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/debtTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:paddingTop="@dimen/textview_debt_paddingtop"
+        android:paddingBottom="@dimen/textview_debt_paddingbottom"
+        android:padding="10dp"
+        android:textSize="@dimen/textview_debt_textsize"
+        android:textColor="@color/yellow"
+        />
+
+</LinearLayout>

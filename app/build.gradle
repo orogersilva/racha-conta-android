@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
 apply plugin: 'com.github.triplet.play'
 apply plugin: 'de.felixschulze.gradle.hockeyapp'
+apply plugin: 'realm-android'
 
 apply from: "${rootProject.getRootDir()}/config/quality/quality.gradle"
 apply from: "${rootProject.getRootDir()}/jacoco.gradle"
@@ -52,7 +53,7 @@ android {
         }
     }
 
-    testBuildType "release"
+    testBuildType obtainTestBuildType()
 
     play {
 
@@ -69,19 +70,43 @@ hockeyapp {
     teams = 72599
 }
 
+// Show test status in console.
+tasks.withType(Test) {
+
+    testLogging {
+        events "passed", "failed"
+    }
+}
+
+def obtainTestBuildType() {
+
+    def result = "debug"
+
+    if (project.hasProperty("testBuildType")) {
+        result = project.getProperties().get("testBuildType")
+    }
+
+    return result
+}
+
 dependencies {
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
 
     compile('com.crashlytics.sdk.android:crashlytics:2.6.0@aar') {
         transitive = true;
     }
 
     testCompile 'junit:junit:4.12'
+    testCompile "org.mockito:mockito-core:2.+"
+    testCompile "org.robolectric:robolectric:3.1.4"
 
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.2.2'
     androidTestCompile 'com.android.support.test:runner:0.5'
     androidTestCompile 'com.android.support:support-annotations:23.1.1'
 }

@@ -1,3 +1,9 @@
 <resources>
+
     <string name="app_name">Racha Conta</string>
+
+    <string name="add">Adicionar</string>
+    <string name="name">Nome</string>
+    <string name="warning_main">Informe quem rachará a conta.</string>
+
 </resources>
