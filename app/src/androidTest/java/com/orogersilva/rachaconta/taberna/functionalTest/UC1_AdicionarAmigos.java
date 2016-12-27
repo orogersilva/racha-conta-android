@@ -1,4 +1,4 @@
-package com.orogersilva.rachaconta.taberna;
+package com.orogersilva.rachaconta.taberna.functionalTest;
 
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.ViewAction;
@@ -8,6 +8,7 @@ import android.support.test.filters.MediumTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.orogersilva.rachaconta.taberna.R;
 import com.orogersilva.rachaconta.taberna.activities.DeskActivity;
 
 import org.junit.Rule;
@@ -53,7 +54,7 @@ public class UC1_AdicionarAmigos {
 
         // ACT
 
-        onView(withId(R.id.deskfloatingactionbutton)).perform(click());
+        onView(ViewMatchers.withId(R.id.deskfloatingactionbutton)).perform(click());
         onView(withId(R.id.friend_name_edittext)).perform(typeText(FRIEND_NAME));
         onView(withId(R.id.add_friend_button)).perform(click());
 

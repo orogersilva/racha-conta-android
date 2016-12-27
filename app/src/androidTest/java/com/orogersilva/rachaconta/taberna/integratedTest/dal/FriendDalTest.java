@@ -1,10 +1,11 @@
-package com.orogersilva.rachaconta.taberna.dal;
+package com.orogersilva.rachaconta.taberna.integratedTest.dal;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.filters.MediumTest;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.orogersilva.rachaconta.taberna.dal.FriendDal;
 import com.orogersilva.rachaconta.taberna.model.Friend;
 
 import org.junit.After;
