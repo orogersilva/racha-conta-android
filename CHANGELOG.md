@@ -1,6 +1,14 @@
 Change Log
 ==========
 
+0.3.2 *(2016-12-26)*
+--------------------
+
+Internal:
+
+ * Ignorando análise estática de código.
+ * Ativando deployment automatizado no Circle CI.
+
 0.3.1 *(2016-12-26)*
 --------------------
 
