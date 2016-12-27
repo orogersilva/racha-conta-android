@@ -1,6 +1,13 @@
 Change Log
 ==========
 
+0.3.7 *(2016-12-27)*
+--------------------
+
+Internal:
+
+ * Definindo continuous deployment para o Travis CI.
+
 0.3.6 *(2016-12-27)*
 --------------------
 
