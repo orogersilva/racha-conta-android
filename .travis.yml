@@ -1,5 +1,12 @@
 language: android
+jdk:
+  - oraclejdk8
+
 android:
+
+  licenses:
+    - android-sdk-license-.+
+    - '.+'
 
   components:
     # Descomente as linhas abaixo se você quiser
