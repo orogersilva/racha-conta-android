@@ -10,7 +10,7 @@ apply from: "${rootProject.getRootDir()}/jacoco.gradle"
 // Versioning information
 def versionMajor = 0
 def versionMinor = 3
-def versionPatch = 2
+def versionPatch = 3
 
 android {
 

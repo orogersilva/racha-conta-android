@@ -1,6 +1,13 @@
 Change Log
 ==========
 
+0.3.3 *(2016-12-27)*
+--------------------
+
+Internal:
+
+ * Desabilitando a execução de testes de instrumentação.
+
 0.3.2 *(2016-12-26)*
 --------------------
 
