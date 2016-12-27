@@ -42,5 +42,5 @@ before_script:
     - adb shell input keyevent 82 &
 
 script:
-    ./gradlew clean testReleaseUnitTest assembleRelease
+    ./gradlew clean testReleaseUnitTest assembleRelease publishApkRelease
 
