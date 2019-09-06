@@ -59,7 +59,7 @@ public class FriendDal {
 
     public Friend retrieve(String name) {
 
-        return new Friend();
+        return null;
     }
 
     // endregion
