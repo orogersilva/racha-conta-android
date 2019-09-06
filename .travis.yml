@@ -15,10 +15,10 @@ android:
     - tools
 
     # A versão do BuildTools usada pelo seu projeto
-    - build-tools-23.0.2
+    - build-tools-28.0.3
 
     # A versão do SDK Android usada para compilar seu projeto
-    - android-23
+    - android-24
 
     # Componentes adicionais
     - extra-google-google_play_services
