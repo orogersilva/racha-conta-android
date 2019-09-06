@@ -14,14 +14,14 @@ def versionPatch = 7
 
 android {
 
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 24
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
 
         applicationId "com.orogersilva.rachaconta.taberna"
         minSdkVersion 15
-        targetSdkVersion 23
+        //targetSdkVersion 24
         versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch * 1
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
 
@@ -61,6 +61,12 @@ android {
         pk12File = rootProject.file('play.p12')
         track = 'alpha'
     }
+
+//    testOptions {
+//        unitTests {
+//            includeAndroidResources = true
+//        }
+//    }
 }
 
 hockeyapp {
@@ -91,22 +97,24 @@ def obtainTestBuildType() {
 
 dependencies {
 
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:design:23.1.1'
-    compile 'com.android.support:recyclerview-v7:23.1.1'
+    implementation 'com.android.support:appcompat-v7:24.0.0'
+    implementation 'com.android.support:design:24.0.0'
+    implementation 'com.android.support:recyclerview-v7:24.0.0'
 
-    compile('com.crashlytics.sdk.android:crashlytics:2.6.0@aar') {
+    implementation('com.crashlytics.sdk.android:crashlytics:2.6.0@aar') {
         transitive = true;
     }
 
-    testCompile 'junit:junit:4.12'
-    testCompile "org.mockito:mockito-core:2.+"
-    testCompile "org.robolectric:robolectric:3.1.4"
+    testImplementation 'junit:junit:4.12'
+    testImplementation "org.mockito:mockito-core:2.+"
+    testImplementation "org.robolectric:robolectric:3.1.4"
+   //testImplementation "org.robolectric:robolectric:4.3"
 
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
-    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.2.2'
-    androidTestCompile 'com.android.support.test:runner:0.5'
-    androidTestCompile 'com.android.support:support-annotations:23.1.1'
+
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:2.2.2'
+    androidTestImplementation 'com.android.support.test:runner:0.5'
+    androidTestImplementation 'com.android.support:support-annotations:24.0.0'
 }

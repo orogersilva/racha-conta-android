@@ -1,6 +1,6 @@
 package com.orogersilva.rachaconta.taberna.bll;
 
-import android.test.suitebuilder.annotation.SmallTest;
+
 
 import com.orogersilva.rachaconta.taberna.dal.ProductDal;
 import com.orogersilva.rachaconta.taberna.model.Product;

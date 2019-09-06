@@ -6,6 +6,8 @@ import android.support.design.widget.FloatingActionButton;
 import com.orogersilva.rachaconta.taberna.BuildConfig;
 import com.orogersilva.rachaconta.taberna.R;
 import com.orogersilva.rachaconta.taberna.dialogs.InputAddFriendDialog;
+import com.orogersilva.rachaconta.taberna.roboeletric.config.RobolectricGradleTestRunner;
+import com.orogersilva.rachaconta.taberna.roboeletric.config.ShadowTheme;
 
 import junit.framework.Assert;
 
@@ -15,14 +17,15 @@ import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
+import org.robolectric.manifest.AndroidManifest;
 import org.robolectric.shadows.ShadowDialog;
 
 /**
  * Created by orogersilva on 12/26/2016.
  */
 
-@RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = Build.VERSION_CODES.LOLLIPOP)
+@RunWith(RobolectricGradleTestRunner.class)
+@Config(constants = BuildConfig.class, sdk = Build.VERSION_CODES.LOLLIPOP, manifest="AndroidManifest.xml", shadows = {ShadowTheme.class})
 public class DeskActivityTest {
 
     // region FIELDS
