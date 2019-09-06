@@ -15,7 +15,7 @@ android:
     - tools
 
     # A versão do BuildTools usada pelo seu projeto
-    - build-tools-28.0.3
+    - build-tools-24.0.3
 
     # A versão do SDK Android usada para compilar seu projeto
     - android-24
@@ -28,7 +28,7 @@ android:
 
     # Especifique, no mínimo, uma imagem de sistema
     # se você precisar executar o emulador durante seus testes
-    - sys-img-armeabi-v7a-android-19
+    - sys-img-armeabi-v7a-android-24
     - sys-img-x86-android-17
 
 before_install:
@@ -36,7 +36,7 @@ before_install:
 
 # Emulator Management: Create, Start and Wait
 before_script:
-    - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
+    - echo no | android create avd --force -n test -t android-24 --abi armeabi-v7a
     - emulator -avd test -no-skin -no-audio -no-window &
     - android-wait-for-emulator
     - adb shell input keyevent 82 &
