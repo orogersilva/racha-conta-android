@@ -2,7 +2,7 @@ language: android
 jdk:
   - oraclejdk8
   
-install: travis_wait mvn install
+install: travis_wait 
 
 android:
 
