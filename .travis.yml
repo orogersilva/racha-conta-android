@@ -1,6 +1,8 @@
 language: android
 jdk:
   - oraclejdk8
+  
+install: travis_wait mvn install
 
 android:
 
@@ -29,7 +31,7 @@ android:
     # Especifique, no mínimo, uma imagem de sistema
     # se você precisar executar o emulador durante seus testes
     - sys-img-armeabi-v7a-android-24
-    - sys-img-x86-android-17
+    - sys-img-x86-android-19
 
 before_install:
     - chmod +x gradlew
@@ -37,7 +39,7 @@ before_install:
 # Emulator Management: Create, Start and Wait
 before_script:
     - android list targets
-    - echo no | android create avd --force -n test -t android-24 --abi armeabi-v7a
+    - android create avd --force -n test -t android-24 --abi armeabi-v7a
     - emulator -avd test -no-skin -no-audio -no-window &
     - android-wait-for-emulator
     - adb shell input keyevent 82 &
