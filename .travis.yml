@@ -13,8 +13,8 @@ android:
   components:
     # Descomente as linhas abaixo se você quiser
     # usar a última revisão de Android SDK Tools
-    - platform-tools
-    - tools
+    #- platform-tools
+    # tools
 
     # A versão do BuildTools usada pelo seu projeto
     - build-tools-24.0.3
