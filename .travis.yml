@@ -4,6 +4,10 @@ jdk:
   
 install: travis_wait 
 
+env:
+  global:
+  - TERM=dumb
+
 android:
 
   licenses:
