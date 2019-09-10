@@ -46,8 +46,8 @@ public class DeskActivityTest {
 
     // region TEST METHODS
 
-    @Test
-    public void clickingOnFloatingActionButton_shouldStartDialog() {
+//    @Test
+//    public void clickingOnFloatingActionButton_shouldStartDialog() {
 
         // ARRANGE
 /*
@@ -69,5 +69,5 @@ if(mDeskActivity != null) {
     }
 */
 
-    }// endregion
+   // }// endregion
 }
