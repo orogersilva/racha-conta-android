@@ -2,13 +2,13 @@ language: android
 jdk:
   - oraclejdk8
   
-install: mvn install. travis_wait 30
+#install: travis_wait 30
 
 sudo: required
 
-env:
-  global:
-  - TERM=dumb
+#env:
+#  global:
+#  - TERM=dumb
 
 android:
 
