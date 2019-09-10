@@ -17,6 +17,13 @@ android {
     compileSdkVersion 24
     buildToolsVersion "28.0.3"
 
+   /* enableUnitTestBinaryResources = true
+    testOptions {
+        unitTests {
+            includeAndroidResources =  true
+        }
+    }*/
+
     defaultConfig {
 
         applicationId "com.orogersilva.rachaconta.taberna"
@@ -110,7 +117,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     testImplementation "org.mockito:mockito-core:2.+"
     testImplementation "org.robolectric:robolectric:3.1.4"
-   //testImplementation "org.robolectric:robolectric:4.3"
+   //testImplementation "org.robolectric:robolectric:4.0"
 
 
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
