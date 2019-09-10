@@ -4,6 +4,8 @@ jdk:
   
 install: travis_wait
 
+sudo: required
+
 env:
   global:
   - TERM=dumb
