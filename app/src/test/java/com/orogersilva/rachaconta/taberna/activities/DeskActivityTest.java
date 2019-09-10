@@ -24,8 +24,8 @@ import org.robolectric.shadows.ShadowDialog;
  * Created by orogersilva on 12/26/2016.
  */
 
-@RunWith(RobolectricGradleTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = Build.VERSION_CODES.LOLLIPOP)
+//@RunWith(RobolectricGradleTestRunner.class)
+//@Config(constants = BuildConfig.class, sdk = Build.VERSION_CODES.LOLLIPOP)
 public class DeskActivityTest {
 
     // region FIELDS
@@ -36,7 +36,7 @@ public class DeskActivityTest {
 
     // region SETUP METHODS
 
-    @Before
+    //@Before
     public void setup() {
 
         //mDeskActivity = Robolectric.setupActivity(DeskActivity.class);
