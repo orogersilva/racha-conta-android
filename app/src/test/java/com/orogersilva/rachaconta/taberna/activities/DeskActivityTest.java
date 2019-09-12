@@ -24,7 +24,7 @@ import org.robolectric.shadows.ShadowDialog;
  * Created by orogersilva on 12/26/2016.
  */
 
-//@RunWith(RobolectricGradleTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 //@Config(constants = BuildConfig.class, sdk = Build.VERSION_CODES.LOLLIPOP)
 public class DeskActivityTest {
 
@@ -36,21 +36,21 @@ public class DeskActivityTest {
 
     // region SETUP METHODS
 
-    //@Before
+    @Before
     public void setup() {
 
-        //mDeskActivity = Robolectric.setupActivity(DeskActivity.class);
+        mDeskActivity = Robolectric.setupActivity(DeskActivity.class);
     }
 
     // endregion
 
     // region TEST METHODS
 
-//    @Test
-//    public void clickingOnFloatingActionButton_shouldStartDialog() {
+    @Test
+    public void clickingOnFloatingActionButton_shouldStartDialog() {
 
         // ARRANGE
-/*
+
 if(mDeskActivity != null) {
     FloatingActionButton addFriendFloatingActionButton = (FloatingActionButton) mDeskActivity.findViewById(R.id.deskfloatingactionbutton);
 
@@ -67,7 +67,7 @@ if(mDeskActivity != null) {
     Assert.assertTrue(true);
 }
     }
-*/
+
 
    // }// endregion
 }

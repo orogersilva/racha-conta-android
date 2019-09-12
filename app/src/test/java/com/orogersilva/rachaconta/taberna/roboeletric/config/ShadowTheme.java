@@ -9,11 +9,11 @@ import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;
 import org.robolectric.shadows.ShadowResources;
 
-@Implements(value = Resources.Theme.class)
+//@Implements(value = Resources.Theme.class)
 public class ShadowTheme extends ShadowResources.ShadowTheme {
 
 
-    @Implementation
+   /* @Implementation
     @Override
     public TypedArray obtainStyledAttributes(AttributeSet set, int[] attrs, int defStyleAttr, int defStyleRes) {
         try {
@@ -25,5 +25,5 @@ public class ShadowTheme extends ShadowResources.ShadowTheme {
                     .build();
             return super.obtainStyledAttributes(attributeSet, attrs, defStyleAttr, defStyleRes);
         }
-    }
+    }*/
 }

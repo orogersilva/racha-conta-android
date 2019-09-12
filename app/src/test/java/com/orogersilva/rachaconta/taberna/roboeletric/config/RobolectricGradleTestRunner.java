@@ -23,7 +23,7 @@ public class RobolectricGradleTestRunner extends RobolectricTestRunner {
         super(testClass);
     }
 
-    private static AndroidManifest getAndroidManifest() {
+   /* private static AndroidManifest getAndroidManifest() {
 
         String manifestPath = PROJECT_DIR+"/app/src/main/AndroidManifest.xml";
         String resPath = PROJECT_DIR+"/app/src/main/res";
@@ -38,12 +38,12 @@ public class RobolectricGradleTestRunner extends RobolectricTestRunner {
             @Override public int getTargetSdkVersion() {
                 return MAX_SDK_SUPPORTED_BY_ROBOLECTRIC;
             }
-           /* @Override
+           *//* @Override
             public String getThemeRef(Class<? extends Activity> activityClass) {
                 return "@style/RoboAppTheme";
-            }*/
+            }*//*
         };
-    }
+    }*/
 
     private static String getProjectDirectory() {
         String path = "";
@@ -55,7 +55,7 @@ public class RobolectricGradleTestRunner extends RobolectricTestRunner {
         return path;
     }
 
-    @Override public AndroidManifest getAppManifest(Config config) {
+   /* @Override public AndroidManifest getAppManifest(Config config) {
         return getAndroidManifest();
-    }
+    }*/
 }

@@ -78,7 +78,7 @@ public class FriendDal {
         resetDatabase();
 
         mRealm.beginTransaction();
-        mRealm.where(Friend.class).findAll().clear();
+        mRealm.where(Friend.class).findAll().deleteAllFromRealm();
         mRealm.commitTransaction();
     }
 

@@ -70,11 +70,11 @@ android {
         track = 'alpha'
     }
 
-//    testOptions {
-//        unitTests {
-//            includeAndroidResources = true
-//        }
-//    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
 }
 
 hockeyapp {
@@ -119,8 +119,8 @@ dependencies {
 
     testImplementation 'junit:junit:4.12'
     testImplementation "org.mockito:mockito-core:2.+"
-    testImplementation "org.robolectric:robolectric:3.1.4"
-   //testImplementation "org.robolectric:robolectric:4.0"
+    //testImplementation "org.robolectric:robolectric:3.1.4"
+    testImplementation 'org.robolectric:robolectric:4.3'
 
 
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
