@@ -6,9 +6,6 @@ jdk:
 
 #sudo: required
 
-#env:
-#  global:
-#  - TERM=dumb
 
 android:
 
@@ -53,7 +50,7 @@ before_script:
     - emulator -avd test -no-window -no-skin -verbose &
     - android-wait-for-emulator
     - adb shell input keyevent 82 &
-
+    
 script:
     ./gradlew clean testReleaseUnitTest
 

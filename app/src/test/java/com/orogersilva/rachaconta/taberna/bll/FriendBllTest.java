@@ -87,7 +87,7 @@ public class FriendBllTest {
         // ACT
 
         Friend gottenNullFriend = mFriendBll.getFriend(NULL_FRIEND_NAME);
-gottenNullFriend = new Friend();
+	//gottenNullFriend = new Friend();
         // ASSERT
 
        assertNull(gottenNullFriend);
