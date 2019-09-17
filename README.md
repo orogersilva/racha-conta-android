@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/orogersilva/racha-conta-android.svg?branch=master)](https://travis-ci.org/orogersilva/racha-conta-android) [![CircleCI](https://circleci.com/gh/orogersilva/racha-conta-android/tree/master.svg?style=svg)](https://circleci.com/gh/orogersilva/racha-conta-android/tree/master)
+[![Build Status](https://travis-ci.org/rafaeldso/racha-conta-android.svg?branch=master)](https://travis-ci.org/rafaeldso/racha-conta-android) [![CircleCI](https://circleci.com/gh/orogersilva/racha-conta-android/tree/master.svg?style=svg)](https://circleci.com/gh/orogersilva/racha-conta-android/tree/master)
 
 Aplicativo para a plataforma Android que auxilia ao rachar a conta em happy hours entre amigos.
 

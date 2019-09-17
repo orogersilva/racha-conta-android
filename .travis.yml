@@ -1,6 +1,11 @@
 language: android
 jdk:
   - oraclejdk8
+  
+#install: travis_wait 30
+
+#sudo: required
+
 
 android:
 
@@ -15,32 +20,39 @@ android:
     - tools
 
     # A versão do BuildTools usada pelo seu projeto
-    - build-tools-23.0.2
+    - build-tools-24.0.2
 
     # A versão do SDK Android usada para compilar seu projeto
-    - android-23
+    - android-24
 
     # Componentes adicionais
     - extra-google-google_play_services
     - extra-google-m2repository
     - extra-android-m2repository
-    - addon-google_apis-google-19
+    - addon-google_apis-google-24
 
     # Especifique, no mínimo, uma imagem de sistema
     # se você precisar executar o emulador durante seus testes
-    - sys-img-armeabi-v7a-android-19
-    - sys-img-x86-android-17
+    - sys-img-armeabi-v7a-android-24
+    - sys-img-x86-android-24
 
 before_install:
     - chmod +x gradlew
+    - mkdir "$ANDROID_HOME/licenses" || true
+    - yes | sdkmanager "platforms;android-28"
+    - yes | sdkmanager "build-tools;28.0.3"
+    - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
+    - echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licenses/android-sdk-preview-license"
 
 # Emulator Management: Create, Start and Wait
 before_script:
-    - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
-    - emulator -avd test -no-skin -no-audio -no-window &
+    - echo no | android create avd --force -n test -t android-24 --abi armeabi-v7a -c 100M
+    - emulator -avd test -no-window -no-skin -verbose &
     - android-wait-for-emulator
     - adb shell input keyevent 82 &
-
+    
 script:
-    ./gradlew clean testReleaseUnitTest assembleRelease publishApkRelease
+    ./gradlew clean testReleaseUnitTest
+
+
 
